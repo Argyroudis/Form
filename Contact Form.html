@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+   <head> 
+ 	<meta charset="utf-8"/>
+	<title> Contact Form </title>
+	
+	<style type="text/css">
+		
+		h1{
+			color: white;
+			background-color: rgb(70, 46, 209);
+			padding: 1em;
+		}
+		div{
+    		background: linear-gradient(white,rgb(255, 213, 134));
+			border-style: solid;
+			border-width: 5px;
+			padding-left: 6px;
+		}
+	</style>
+    </head> 
+    <body> 
+	<h1 style="text-align: center">  Contact Form </h1>
+	
+	<div> 
+
+    <b><h2> Please fill in the following details </h2></b>
+    <br/>
+
+    <form  id = "clientForm"  name = "clientForm" method = "get" action = "Data.html" >
+        <label for="firstName">Full name:</label> <br/> <input type="text" name="firstName" id="firstName" required>
+        <br/>  <br/>
+
+
+        <a> Age:  </a> <br/>
+            <label> <input type="radio" name="Age" value="until 17" /> Under 17 </label> <br/>
+            <label> <input type="radio" name="Age" value="18-30" /> 18-30</label> <br/>
+            <label> <input type="radio" name="Age" value="31-40" /> 31-40 </label> <br/>
+            <label> <input type="radio" name="Age" value="41-55" /> 41-55 </label> <br/>
+            <label> <input type="radio" name="Age" value="56-65" /> 56-65 </label> <br/>
+            <label> <input type="radio" name="Age" value="More than 66" /> Above 66 </label> <br/>
+        <br/>
+        <a> What information do you want? (choose as many as you want): </a> <br/>
+            <label><input type="checkbox" name="information" value="Hotels"> Hotels</label> <br/>
+            <label><input type="checkbox" name="information" value="Museums"> Museums</label> <br/>
+            <label><input type="checkbox" name="information" value="Sights"> Sights</label> <br/>
+            <label><input type="checkbox" name="information" value="Restaurant"> Restaurant</label> <br/>
+        
+        <br/>
+
+        <a> City you are interested in: </a><br/>
+        <select name="city" multiple size="4">
+            <option value="Rome" selected="selected">Rome</option>
+            <option value="Dublin">Dublin</option>
+            <option value="London">London</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <br/><br/>
+        <label for="e-mail"> Email: </label> <br/> <input type="email" name="e-mail" id="e-mail" required > <br/>
+
+        <p>
+            <input type="submit" name="button1" value="Submit-Show details">
+            <input type="reset" id ="Reset the Form" value="Clear">
+        </p>
+
+	</form>
+
+	</div>
+
+    </body> 
+</html> 

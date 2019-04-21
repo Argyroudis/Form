@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Data recording</title>
+
+		<style>
+		div#problemArea {border:solid 2px red; margin:7px; 
+			padding:5px;
+			background-color:#000000;
+			color: white;
+			float:left;
+			width:40%;} 
+		</style>
+
+
+
+	</head>
+	<body>
+		<h1>Data recording</h1>
+		<div id="problemArea"> Here are your entries: <br/> -----------------------------------------------</div>  
+        <script>
+		
+		function getUrlVars() {
+			var vars = {};
+			var proto=window.location.href;
+			var deutero=decodeURIComponent(proto);
+			var trito=deutero.replace("+"," ");
+			var parts = trito.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+				//vars[key] = value;
+				if(vars[key]){
+					if(vars[key] instanceof Array){
+						vars[key].push(value);
+					}else{
+						vars[key] = [vars[key], value];
+					}
+				}else{
+					vars[key] = value;
+				}
+			});
+			return vars;
+		}
+
+		function appendTo(ID,Text){
+			var x = document.getElementById(ID);
+			x.innerHTML = x.innerHTML + "<br/>" + Text + "<br />";
+		}
+		var zero = getUrlVars()["firstName"]
+		var first = getUrlVars()["Age"];
+        var second = getUrlVars()["information"];
+		var third = getUrlVars()["city"]
+		var fourth = getUrlVars()["e-mail"]
+ 	
+	    appendTo("problemArea", zero);
+        appendTo("problemArea", first);
+		appendTo("problemArea", second);
+		appendTo("problemArea", third);
+		appendTo("problemArea", fourth);
+
+		
+
+		</script>  
+		
+	</body>
+</html>
